@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="media/favicon.ico"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="description" content="A letter in support of Black life and more equitable futures at SAIC.">
+  <meta name="author" content="SAIC BLACK FACULTY">
+  <style>
+  body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    color: #000000;
+  }
+  a {
+    color: #000000;
+    text-decoration: underline;
+    color:#FFFFFF;
+  }
+  a:hover {
+    color: #000000;
+    text-decoration: underline;
+    color:#000000;
+  }
+  h1 {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    text-decoration: bold;
+    color: #000000;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    text-transform: none;
+    color: #000000;
+
+  }
+  h4 {
+    font-size: 19px;
+    font-family: 'Lora', serif;
+    line-height: 1.375em;
+    color: #000000;
+    font-weight: bold;
+
+  }  
+
+.button {
+  background-color:#FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+  .container-fluid {
+    padding: 10px 50px;
+  }
+  
+#wrapper {
+
+  margin: auto;
+  width: 100%;
+  border: none;
+  overflow: hidden; /* add this to contain floated children */
+}
+#sidebyside {
+    margin: 4x;
+    padding: 20px;
+    width: 30%;
+    float:left; /* add this */
+    
+}
+#sidebyside2 {
+    margin-top: auto;
+    width: 70%;
+    padding: 20px;
+    border: none;
+    float: left; /* add this */
+}
+div.a {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+  .bg-grey {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  table, th, td {
+  border: none;
+  border-collapse: collapse;
+}
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+
+  .navbar {
+    text-decoration: none;
+    margin-bottom: 5px;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-family: 'Lora', serif;
+    padding: 10px;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    text-decoration: none;
+    color: #fff !important;
+    font-family: 'Lora', serif;
+    font-size: 20px !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    text-decoration: none !important;
+    color: #000000 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #000000 !important;
+  }
+
+
+ol li span {
+    font-weight: normal;
+ }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #000000;
+   color: #000;
+   text-align: center;
+   font-family: 'Lora', serif;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.collapsible {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #000000;
+}
+
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a></div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#refusal"><span style="font-size: 15px;">We Refuse.</span></a></li>
+        <li><a href="#adminrespond"><span style="font-size: 15px;">Why We Refuse</span></a></li>
+        <li><a href="#takeaction"><span style="font-size: 15px;">Take Action</span></a></li>
+        <li><a href="index.html"><span style="font-size: 15px;">Back</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Cosign Section) -->
+<div id="refusal" class="container-fluid bg-grey">
+        <div class="container">
+            <div id="wrapper"><center>
+              <br><br><br><iframe width="760" height="515" src="https://www.youtube.com/embed/6FqwnubqrqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                
+              <h1><text style="color: #FFFFFF">We <b>refuse</b> to be misunderstood and mistaken.<br>We refuse to be silenced and plactated.</text><br><br></h1></center>
+
+              <button class="collapsible">Click to read more about why we refuse on this day, Aug 7th, an SAIC designated "day of mourning." </button>
+              <div class="content">
+                <p> <br>
+                         <p><text style="color:#FFFFFF">
+                        
+                          <b>WHAT WE DEMANDED WHAT YOU CO-OPTED</b><br>
+                          <i>BIPOC CHORUS</i><br><br>
+              
+                          <b>SAIC Admin :</b> What happened to George Floyd was wrong. We take a stand against racism. We’re here to listen. What can SAIC be doing? <br>
+              
+                          <div class="a"><b>BIPOC Staff at SAIC : We need time to mourn. Can we be given time to mourn without requiring the use of PTO? <br><br></b>
+                
+                            <b>We Refuse :</b> SAIC Admin upholds white supremacy culture through the erasure of BIPOC labor, which further normalizes widespread precarity among the majority of SAIC employees.<br><br><br><br></div>
+              
+                          <b>SAIC Admin :</b> No. We can’t apportion benefits based on race. Staff will need to use PTO or talk to HR about bereavement leave options. Besides that, what else would you recommend? <br><br>
+              
+                             <div class="a"><b>BIPOC Staff reactions : This is not a personal issue that would require staff to use their limited PTO. You asked how to support, but dismiss a basic ask like time off for mourning. If BIPOC can’t morn based on the felt impacts of racism, then call it a “schoolwide day of mourning.” [actual curse word]<br><br></b>
+                
+                               <b>We Refuse :</b> SAIC Admin hides behind   white supremacist legal priorities to sabotage BIPOC community leadership and escape accountability for upholding a white supremacy culture. SAIC Admin lacks the imagination and creativity required for competent leadership. <br><br>
+              
+                               <b>We Refuse :</b> BIPOC staff are forced to accept that their interests are never prioritized in policy-making.  SAIC Admin and the decisions of its legal team protects white supremicist culture.<br><br><br><br></div>
+              
+                               <b>SAIC Admin :</b> Let’s announce a Schoolwide Day of Mourning!<br><br><br>
+              
+                          <center><b>#WeRefuse</b> your day of mourning.</center><br><br>
+              
+                        </text></p>
+                         <BR></p>
+              </div><br><br>
+         
+            </div>
+              </div>
+        
+        </div>
+    </div>
+
+<!-- Container (letter Section) -->
+<div id="adminrespond" class="container">
+  <div class="row">
+    <div class="container">
+          <center><br><br><br>
+
+        
+            <h1>
+              We do not accept these emails from SAIC's administraion as an adequate or appropriate response to our letter :</b></h1><br>
+
+              <embed src="https://saicmovingforward.github.io/letter/link_docs/response-from-admin_refusal.pdf" type="application/pdf" style="border:none;" width="100%" height="465"></iframe><br><br><br>
+
+            <b>Because Black people</b><br>
+            are still disproportionately dying from COVID-19.<br><br>
+            
+            <b>Because Black people</b><br>
+            are still disproportionately surveilled, arrested, tortured, murdered and imprisoned by the state.<br><br>
+            
+            <b>Because Black people</b> <br>
+            who are disproportionately incarcerated are still being exposed to COVID-19 in jails and prisons.<br><br>
+            
+            <b>Because we are outraged</b> <br>
+            that Black trans women are murdered everyday.<br><br>
+             
+            <b>Because we are outraged</b> <br>
+            that Black girls and women are raped, murdered and missing.<br><br>
+            
+           <b>Because Black students, Black staff, and Black faculty</b><br>
+            are inextricably linked to these atrocities happening to and around us.<br><br>
+            
+            <b>Because Black essential workers</b><br>
+            are dying or bearing the brunt of reckless, professionally immature leaders who refuse to value Black lives over the economics of reopening. <br><br>
+            
+            <b>Because we are yet the bereaved survivors</b> <br>
+            of these atrocities and we are determined to make it possible for others to survive. In this very world, SAIC exists. <br><br>
+            
+            <b>Because of these inequities,</b> <br>
+            SAIC exists.<br><br>
+            
+            <b>Because you are responsible</b> <br>
+            and your response is not enough. <br><br>
+            
+            
+            <b>Your late apology</b> <br>
+            for your inaction and tacit endorsement of the public use of an anti-black racial slur is  not enough. <br><br>
+            
+            <b>We know that you believe</b> <br>
+            you know better than us what is owed.</b><br><br>
+            
+            <b>We assure you, you do not.</b><br><br>
+            
+            <b>We are owed protection from you.</b> <br><br>
+            
+            <b>We are owed structural change.</b> <br><br>
+            
+            <b>We will not accept anything less than our demands.</b>  <br><br>
+            
+            <b>We are saving our own lives.</b> <br><br>
+            
+           <b> Your insufficient response</b> <br>
+            to our demands is a refusal to join us.</b> <br><br>
+            
+            <b>We do not accept.</b> <br><br>
+            
+            <b>All Black lives matter.</b> <br><br>
+            
+            <b>We do not accept</b> <br>
+            the pattern in which institutions like ours are allowed to establish the terms of accountability, especially when these terms are formed on the basis of popular consensus. <br><br>
+            
+           <b> Black Lives</b><br>
+            have always mattered even when historically white institutions and perpetually white institutional leadership are having trouble with this fact. It may be that the time has come for more people to hear the sound of Black Lives Matter, but we expect our institution to listen. <br><br>
+            
+            <b>Our lives and our demands are non-negotiable.</b> <br><br>
+            
+            <b>Our lives. Our demands.</b><br>
+            These are non-negotiable.</b><br><br>
+            
+            <b>Because you represent this institution, you represent us.</b> <br><br><br>
+            
+            
+            
+            <b>We will not allow you to misrepresent anti-racism</b><br>
+            by promising anything less than structural change, beginning with an immediate transformation of who has the power to make decisions and who sets the terms of accountability. <br><br><br>
+            
+            
+            <b>You are not the experts.</b><br>
+            Students, who have named our problems, staff who have shouldered them, and faculty who will stand in your way are well equipped to lead. <br><br>
+            
+            <b>We do not accept the tone of condescension at this institution.</b> <br><br>
+            
+           <b> Your idea of anti-racism needs work.</b> <br>
+            You are worried about admissions and enrollment.<br><br>
+            
+            <b> We are concerned</b><br>
+            that your policies and practices significantly shrink the possibilities of education during a pandemic. <br><br>
+            
+            <b> We are worried</b><br>
+             that white supremacy and its ties to inadequate policies of health and safety will worsen homelessness, illness, and death within our school and wider community.<br><br>
+            
+             <b> Your idea of trying needs vision.</b><br>
+            You are planning to suspend tuition increases for 22% of students.<br>
+            We are planning to reveal to parents, students, and the public how much your lack of imagination and leadership will cost.<br><br>
+            
+            <b>  Your idea of diversity, equity and inclusion needs decolonizing.</b><br>
+            You are committing to support one individual, after only recently appointing the DEI director to the president’s cabinet.<br><br>
+            
+            <b>  We are committed to intersectionality,</b> <br>
+            more than a single, unbalanced invitation to the table. We have demanded a VP position and a strategic plan for a rebost development of the role of DEI at SAIC, including multiple DEI positions with multiple responsibilities in areas of governance.<br><br>
+            
+            <b>  Your idea of business overly relies upon tuition,</b><br>
+            positioning faculty salary as the problem, when 70% of faculty are part-time, and only 12% of all faculty are BIPOC.<br><br>
+            
+            <b> We are suspicious</b><br>
+            of your business ideas in general, especially when they come at the expense of artists and designers whose labor builds your reputation, your cultural capital, and your salaries. <br><br>
+            
+            <b> Your idea of policy and law or what can and cannot be done simply need to change.</b><br><br>
+            
+            <h1><b>We do not accept.</b></h1><br><br>
+            
+            
+        </h1></center> </div>
+     
+
+  </div>
+    </div>
+
+    <div id="takeaction" class="container-fluid bg-grey">
+      <div class="container">
+          <div id="wrapper">
+              
+            <BR><BR><br>
+
+         <center><H1><text style="color:#FFFFFF"><b>Speak up. Take Action.</b></H1><br>
+          Please consider supporting our campaign to dismantle structural racism at SAIC in the following ways:</center><br>
+          <br>
+          <br><b>Share our original Letter from Black Faculty :</b>
+            <ul>
+              <li>Add a link to the letter in your social media account profiles.</li>
+              <li>Add a link to the letter in your SAIC Gmail signature</li>
+            </ul>
+            
+              <br>
+            
+            <b>Use the following hashtags in social media posts related to SAIC anti-racism campaigns :</b>
+            <ul>
+              <li>#saicsolidarity</li>
+              <li>#dismantlesaic</li>
+              <li>#SAICBlackFacultyLetter</li>
+              <li>#SAICBlackFutures</li>
+              <li>#WeDoNotAccept</li>
+              <li>#WeRefuse</li>
+            </ul>
+       
+        
+             <br><br>
+
+            <B>Create social media content related to our demands:</b><br>
+              <ul>
+                <li>Record yourself reading “We do not accept.”</li>
+                <li>Record a testimonial of a personal encounter with racism at SAIC.</li>
+
+                  <br>
+                  <dd>These can be video or audio recorded directly from your mobile phone or other device.<br>
+                  Once recorded, do the following:<br><br></dd>
+            
+                    <li>Upload your recording(s) to your personal social media accounts (Instagram, Facebook, Twitter, etc.)</li>
+                    <li>Send your recording to <a href="mailto:saicblackfutures@protonmail.com">saicblackfutures@protonmail.com</a> - if the file size is too large to send via email, please upload and send via <a href="https://wetransfer.com/"> WeTransfer</a>.  Your recording will be uploaded and made public on the <a href="https://www.youtube.com/channel/UCKVBseAl-_2R_jevsIyWbFQ"> Moving Forward YouTube channel</a>.</li>
+                  </ul>
+
+
+              <br><br>
+
+              <b>  Participate in our semester-long vacation responder action : </b>
+              <ol>
+                <li>Turn on the vacation responder in your SAIC Gmail account every weekend from now through the end of the Fall 2020 semester.</li><br>
+
+                <li><b>Use the following subject line for your vacation responder: </b>
+                  <dd>“Working to dismantle structural racism at SAIC.”</li></dd>
+                  
+                <dd><br><b>-OR-</b><br><br>
+
+                  <b>Use the following message for your vacation responder:</li></b><br>
+                  <dd>“I am away from email in solidarity with the students, faculty, staff, and alumni currently working to dismantle structural racism at SAIC and demanding repair for harms caused by anti-Blackness and white supremacy within our school community and beyond.  If you'd like to learn more about and/or support these efforts, please visit the following website: https://www.saicmovingforward.github.io/letter/#cosign.</dd>
+    
+              </ol>
+      
+              
+              <br><br>    <center><H1><text style="color:#FFFFFF"><b>Thank you in advance.</b></H1><br>     <br><br>           <br><br>
+            
+              </div>
+             </div>
+            </div>
+           </div>
+         </div>
+         <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              } 
+            });
+          }
+          </script>
+
+<div class="footer"><p>
+  Admin is a monument to white supremacy. We do not accept .</p></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
