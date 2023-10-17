@@ -2,11 +2,7 @@
 
 This repository is a space where the group known as SAIC BLACK FUTURES communicates with their community. 
 
-# 2023: letter #2, 
-
-This is a letter is written in support of ...
-
-# 2020: letter #1,
+# 2020: letter #1
 
 This is a letter in support of Black life and black futures at SAIC.
 
