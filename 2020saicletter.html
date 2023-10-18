@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="media/favicon.ico"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="description" content="A letter in support of Black life and more equitable futures at SAIC.">
+  <meta name="author" content="SAIC BLACK FACULTY">
+  <style>
+  body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    color: #000000;
+  }
+  h1 {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    text-decoration: bold;
+    color: #000000;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    text-transform: none;
+    color: #000000;
+
+  }
+  h4 {
+    font-size: 19px;
+    font-family: 'Lora', serif;
+    line-height: 1.375em;
+    color: #000000;
+    font-weight: bold;
+
+  }  
+
+.button {
+  background-color:#FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+  .container-fluid {
+    padding: 10px 50px;
+  }
+  
+#wrapper {
+
+  margin: auto;
+
+    width: 100%;
+    border: none;
+    overflow: hidden; /* add this to contain floated children */
+}
+#sidebyside {
+    margin: 4x;
+    padding: 20px;
+    width: 30%;
+    float:left; /* add this */
+    
+}
+#sidebyside2 {
+    margin-top: auto;
+    width: 70%;
+    padding: 20px;
+    border: none;
+    float: left; /* add this */
+}
+  .bg-grey {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  table, th, td {
+  border: none;
+  border-collapse: collapse;
+}
+
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+
+  .navbar {
+    margin-bottom: 5px;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-family: 'Lora', serif;
+    padding: 10px;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+    font-family: 'Lora', serif;
+    font-size: 20px !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    text-decoration: none !important;
+    color: #000000 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #000000 !important;
+  }
+
+ol {
+     font-weight:bolder;
+ }
+ol li span {
+    font-weight: normal;
+ }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #000000;
+   color: #000;
+   text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a></div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#cosign"><span style="font-size: 15px;">Co-sign</span></a></li>
+        <li><a href="#contact"><span style="font-size: 15px;">Contact</span></a></li>
+        <li><a href="the-refusal.html"><span style="font-size: 15px;">Admin Responded, We Refused</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (letter Section) -->
+<div id="letter" class="container">
+  <div class="row">
+    <div class="container">
+        <br><br><br><br><br><p></p>
+        
+        <h1>To Provost Martin Berger, President Elissa Tenny, and SAIC Board of Governors&#58;</h1><br>
+   <p>Beyond a written apology, we, the undersigned Black faculty at SAIC, alumni, and community supporters expect accountability for SAIC’s unfulfilled commitments to anti-racism, diversity, equity and inclusion with immediate steps to provide resources & funding to dismantle structural racism. We are extremely dismayed by the facts of what it has cost - two years of staff, student and faculty labor, financial resources, and an international Black Lives Matter Movement - to create this opening for racial justice at SAIC. We are intervening to repair our community in response to <a href="https://github.com/saicmovingforward/letterdocs1_2020/blob/master/Doc1_FromMB_ImSorry.pdf"> Martin Berger’s public acknowledgement</a> of the pain that he has caused. We call for the resignation of all parties complicit in prolonged inaction and/or negligence on related issues. In addition, we demand the following from the Board and the administration: &#58;</p><br>
+   <b><h2>NOW</h2></b><ol><br>
+       <li><span>Directly and transparently address the <a href="https://docs.google.com/forms/d/e/1FAIpQLSesvfzjbXpahQ71fvWvYLwUeJ5phpjjrY4u88YuAepmOQVUsA/viewform"> Black Student Union’s petition.</a> Prioritize the cancellation of the annual tuition increase and “a serious demonstration of shouldering financial burden proportionately” as a means of keeping student-workers, staff, and faculty employed during the COVID-19 pandemic.</li></span><br>
+       <li><span><a href="https://github.com/saicmovingforward/letter/blob/master/link_docs/Doc2_FromET_Concrete%20Actions%20Toward%20Anti-Racism.pdf"> Provide detailed plans to demonstrate unequivocal support</a> for students, faculty, and staff who are working proactively to organize in support of the Black Lives Matter Movement towards an anti-racist SAIC. In particular, we demand an advocate appointed by the faculty to the legal team, who will provide oversight and ensure that there will be no anti-Black retaliation or institutional retribution whatsoever for such activities. We are painfully aware that Black faculty and staff have endured forms of retaliation such as racial microaggressions, exclusion, blocking advancement, reassignment, and demotion for speaking up in the past. The rules and regulations of SAIC administered by the legal team clearly state that their purpose is to protect the interests of students and faculty. “Who do you serve, who do you protect?”</span></li><br>
+       <li><span>Create a scholarship fund in honor of <a href="https://www.nytimes.com/2020/06/19/obituaries/lynika-strozier-dead-coronavirus.html"> Lynika Strozier</a>, SAIC faculty and staff member who recently passed due to COVID-19. This scholarship will offer three discrete 100% tuition awards exclusively for Black students from Chicago Public Schools, Black transfer students, and Black international students from the African Diaspora, respectively.</li></span><br>
+       <li><span>The institution will acknowledge the complicit roles of leadership in any pain that has been caused by Provost Martin Berger, which must be understood in terms of nearly 2 years of labor and institutional resources, as well as damage to the workplace environment. This process will be overseen by the independent monitor selected by the Black Student Union. President Elissa Tenny and Provost Martin Berger will submit to a full accounting audit <span style="text-decoration: underline;"> to determine the monetary cost</span> to the institution of Martin Berger’s public use of the n-word in 2018, including records of all formal and informal meetings between members of administration, meetings with students, staff and faculty, records of financial expenses, and all internal and external advising, including the town hall with Chicago Regional Organizing for Antiracism (Chicago ROAR). The full expense of this process will be matched by funding directed to the Lynika Strozier Scholarship Fund.</li></span><br>
+       <li><span>We demand the institution strategize the preservation of BIPOC staff and faculty. Formalize an open process of decision making and transparency with anticipated revenue losses and subsequent layoffs and furloughs during COVID-19 campus reopenings. The administration has <a href="link_docs/Doc3_FromET_COVID-19- Financial Challenges, Enduring Mission.pdf">presented plans</a> based on a 15-25% loss of income when in reality it expects to lose 50-75% of usual tuition income and that there will be several rounds of layoffs. This projected decrease in income is being balanced out with cuts.  The institution has already begun implementing these decisions with minimal transparency, no prior notice to staff, and inadequate compensation as it relates to pay and benefits during a pandemic.</li></span><br>
+       <li><span>Commit to immediately reinstate the contracts of BIPOC staff and faculty, following the resolution of the current fiscal crisis or within two years.</li></span><br>
+       <li><span>The conditions of SAIC at Homan Square are unacceptable. SAIC engages in lackadaisical financial support of staff and programming, while claiming a deep investment in the North Lawndale community. In 5 years, there has been no broad institutional commitment to establish the site as a part of SAIC’s city campus. The majority of Homan Square programming directly serving North Lawndale residents is largely funded by grants which do not reflect a priority in the Office of Advancement. Provide transparent financial records and audits of past evaluations for Homan Square’s community classes, workshops and events that serve Black youth and community members in North Lawndale. From these audits produce actionable items and a timeline of clear benchmarks for decolonizing SAIC’s community-engaged efforts. This includes providing consistent funding to long-term projects at Homan Square, and long-term contracts to leaders of Homan Square workshops and programs.  </li></span><br>
+       <li><span>Discontinue all forms of communication that position the issues that impact BIPOC in Chicago as external and unrelated to the institution, including <a href="https://github.com/saicmovingforward/letterdocs1_2020/blob/master/Doc4_Message%20from%20the%20Chair%20of%20Faculty.pdf">language that minimizes Black death</a>, codes racial language about protests as urban unrest, describes contracted workers as non-members of the SAIC community, and characterizes victims of <a href="https://github.com/saicmovingforward/letterdocs1_2020/blob/master/Doc5_Staying%20Safe%20in%20the%20City.pdf"> violence in the vicinity of campus as non-members of the SAIC community</a>. Racism and the lack of anti-racist practices by SAIC are the reasons that BIPOC Chicago is positioned outside so often. These communications reinforce destructive cultural attitudes, only ensuring that insiders view themselves as earnest, and well-meaning, but ultimately safe from harm. We demand that the internal and external communications team evaluate diversity and hire staff representative of the demographic composition of SAIC and Chicago.</li></span>
+       <br><br>
+    </ol>
+
+    <h2>IN 30 DAYS</h2><br>
+
+    <ol start="9">
+        <li><span> Offer rigorous COVID-19 related health support to subcontracted staff during campus reopenings. Ensure that all subcontracted employees have adequate access to health insurance and/or hazard pay, PTO, and COVID-19 testing. Ensure the contracting companies provide coverage or find a new subcontractor. “According to the Bureau of Labor Statistics, <span style="font-style:italic;"> roughly 32% of university and <a href="https://news.bloomberglaw.com/us-law-week/insight-universities-should-stay-closed-to-protect-workers-of-color"> college workers are people of color</a>.</span> If campuses are reopened, these workers of color will disproportionately suffer the risks of hospitalization and death.” Black security and Black food-service are some of the first and longer-lasting relationships students make with Black people on campus. 
+        </li></span><br>
+        <li><span>Contracted and internal staff will be provided with a limited amount of paid sick leave (14 days of quarantine at minimum) and unlimited unpaid sick leave in addition to whatever provisions they are currently afforded. This is important for the wellbeing of our entire campus community, and directly benefits the overall health of the staff. </li></span><br>
+        <li><span>Board members must divest from retirement funds, investments, endowments, and other potential ties to white supremacist, settler colonialist, and carceral investments. Board members who do not personally engage in immediate divestment in these shareholdings which directly contribute to the oppression of BIPOC should be asked to resign.</span></li>
+        <br>
+    </ol><br>
+
+    <h2>IN 60 DAYS</h2><br>
+
+    <ol start="12">
+        <li><span>Offer group therapy and peer-led groups as an alternative to the 16 week limit for counseling services at the Wellness Center. During the pandemic, a time of schoolwide cuts, scarcity, and unstable networks of communication, these services are vital to students’ wellbeing. Following the resolution of the current fiscal crisis or within 2 years, discontinue the 16 session limit for counseling services for students.</span></li><br>
+        <li><span>Petition the Board of Trustees to begin a deaccession of art that is not currently on display at the Art Institute due to contextual racial significance or potential harm.</span></li><br>
+        <li><span>Petition the Board of Trustees to begin rewriting deaccessioning policies related to the proceeds from the sale of art objects at the Art Institute of Chicago to address fiscal deficits affecting BIPOC staff at the museum and school.  </span></li>
+
+    </ol><br><br>
+
+
+    <h2>IN 90 DAYS</h2>
+
+    <ol start="16"><br>
+        <li><span>The director of Diversity Equity + Inclusion position will become a VP position.</span></li><br>
+        <li><span> Direct observation, involvement and collective authority of DEI VP in all decision making in regards to legal and fiscal issues related to communications, tuition increase, retention and recruitment of staff, faculty, deans, and director level staff.</span></li><br>
+        <li><span>Direct liaison with the Board of Governors and DEI VP. Presently, there is no transparency or direct line of communication between the board and DEI director.</span></li><br>
+        <li><span>Direct liaison with the legal team of SAIC and DEI VP. Presently, there is no transparency or direct line of communication between the lawyers and DEI director.</span></li><br>
+        <li><span>Allocate full funding, support, and resources for 2 Diversity Equity and Inclusion positions who will directly oversee and evaluate institutional practices with regard to retention, promotions, recruitment, searches, hiring and appointments.</span></li>
+    </ol><br><br>
+
+    <h2>WITHIN 1 YEAR</h2>
+
+    <ol start="21"><br>
+        <li><span>Resume all anticipated hiring of faculty of color from Spring 2020 searches postponed due to COVID-19 closures. We view these losses to our community as an extension of the above mentioned layoffs and believe that the decision not to move forward with hiring faculty whose scholarship and art practices advance the critical traditions of Black studies and cultural studies will have a direct and negative impact on current and future enrollment.</span></li><br>
+        <li><span>All except 1 of the current VPs are white. All except 1 person of color has been eliminated from other upper administration. Provide an assessment of the racial composition and tenure of all VP, deans and director level staff. Commitment to equalize these numbers with the percentage of Chicago’s racial composition within 3 years. </span></li><br>
+        <li><span>Secure an endowment fund for Black graduate students through the Office of Advancement.  Establish a grant program for Black MFA candidates following the model for the program begun by Walter Massey, and include a detailed narrative of the program’s history in the program’s public announcement.</span></li><br>
+        <li><span>Establish dedicated space on campus for BIPOC students. This has been modeled by <a href="https://inclusion.uchicago.edu/>">the Center for Identity and Inclusion at the University of Chicago</a>, <a href="https://www.northwestern.edu/inclusion/reviews-and-reports/bh-facility-pages/index.html">the Black House at Northwestern</a>, <a href="http://nyumburu.umd.edu/">the Nyumburu Cultural Center at the University of Maryland</a>, <a href="https://umojacommunity.org/umoja-q-2017">Umoja community across California campuses</a>, and others. We understand that such a space will only ever be a hush arbor in the rigorous radical tradition of our ancestors who could not physically leave the plantation but could make space in the interim for freedom practice.</span></li><br>
+        <li><span>Prioritize filling all vacancies in the DLRC, Wellness Center, and Counseling Service with full-time staff of color--including queer, trans, and disabled staff--who practice racially and culturally informed mental and physical health and trauma response.</span></li><br>
+    </ol><br><br>
+
+    <h2>WITHIN 5 YEARS</h2>
+
+    <ol start="26"><br>
+        <li><span>Increase full funding, support, and resources for 4 additional Diversity Equity and Inclusion positions who will directly oversee and evaluate institutional practices with regard to retention, promotions, recruitment, searches, hiring and appointments. Recognizing the current crises, we propose drafting a commitment following the resolution of the current fiscal crisis.</span></li><br>
+        <li><span>Create and implement systems and pathways for part-time BIPOC faculty to advance into full-time, tenure track positions.</span></li>
+    </ol><br><br>
+
+   <p>We write to you today as experts, understanding that art institutions commit racialized violence. We write to save our students--particularly our Black students and other students of color--from such violence. We and our undersigned accomplices write in solidarity with the Black Student Union to express our frustration and concern regarding: SAIC’s ongoing refusal to respond to students demands for reparations from the highest paid staff; SAIC’s refusal to address BIPOC faculty, staff, and students’ concerns about racism at SAIC voiced on social media, in emails, and through conversations with leadership; and what inaction and foreclosed conversation signals for the future of SAIC. </p><br>
+   <p>Black lives matter, and we write to you in defense of Black life. We demand a dismantling of settler colonialism, racial capitalism, and in the words of Gwendolyn Brooks, the genteel “knowledgeable unknowing” that structure our arts and education institutions, including those that undergird and guide SAIC. The future of SAIC depends on its ability to divest from these systems--to commit to unmaking itself as a haven for and avatar of these systems--to commit fully to an anti-racist, abolitionist, and decolonial ethics of care. </p><br>
+   
+   <p>We know that as a haven for and relic of white supremacy, the role of art museums and their affiliated institutions such as SAIC should be to facilitate interim freedom practices en route to dismantling anti-Black racism. We urge SAIC to unambiguously commit to a social justice framework modeled by the founders and leaders of the Movement for Black Lives--one that is rooted in abolitionist feminism and is unapologetically anti-racist, anti-capitalist, anti-ableist, and in celebration of queer and trans lives. We know this letter is just one form of direct action, and that it is not the first of its kind: We lift up, in particular, similar letters and petitions from our Black Student Union. We endorse <a href="https://www.chicagoartsforblacklives.com/link">Chicago artists’ petition</a> demanding CPS divestment from CPD. We endorse the <a href="https://www.artnews.com/art-news/news/art-institute-of-chicago-layoffs-open-letter-1202692804/">letter from workers to the Art Institute of Chicago Museum</a>. We know that without serious commitment to institutional change there will be many more letters to come. </p><br>
+
+   <p>There is a different world on the horizon. As Black artists, we have been envisioning and practicing the coming world for a long time. The future is coming--Harriet Tubman taught us that it is already here--and we demand SAIC be a decisive part of its making. </p><br>
+
+   <h4> Signed,</h4>
+   Kumasi J. Barnett, SAIC, Contemporary Practices<br>
+
+   James Britt, Former Director of Multicultural Affairs<br>
+   
+   Rashayla Marie Brown, SAIC, Photography and Former Inaugural Director of Diversity and Inclusion<br>
+   
+   Christian Campbell, SAIC, Writing<br> 
+   
+   Jory Drew, SAIC, Continuing Studies<br> 
+   
+   D. Denenge Duyst-Akpem, Associate Professor, Adjunct, SAIC, Low-Res MFA Program, ARTHI<br>
+   
+   Nia Easley, SAIC, VISCOM, Interim Administrative Director, Deans <br>
+   
+   Leah Ra'chel Gipson, SAIC, Art Therapy and Counseling<br>
+   
+   Andres L. Hernandez, SAIC, Art Education<br>
+   
+   shawné michaelain holloway, SAIC, New Arts Journalism / FVNMA <br>
+ 
+   A.J. McClenon, SAIC, Contemporary Practices <br> 
+   
+   Sasha Phyars-Burgess, SAIC, Photography <br> 
+   
+   Patrick Lynn Rivers, SAIC, Liberal Arts <br>
+   
+   Stephanie Slaughter, SAIC, AIADO <br>
+
+   Jina Valentine, SAIC, Printmedia <br>
+   
+   Anna Martine Whitehead, SAIC, Contemporary Practices<br>
+  
+   
+    <br>
+
+    <h4>Suported by our allied colleagues, </h4><br>
+    Dio Aldridge, SAIC, Staff - Diversity, Equity, and Inclusion <br>
+
+    Sampada Aranke, Assistant Professor, Art History, Theory, and Criticism, SAIC<br>
+    
+    Caroline Bellios, SAIC, Faculty - Fashion & Art History, Alum - Fashion, Student - VCS<br>
+
+    Gregg Bordowitz, Professor, Director SAIC Low Residency MFA Program<br>
+    
+    Nick Briz, SAIC, Film, Video, New Media, and Animation<br>
+
+    Apriel Campbell Assistant Director of Civic Engagement SAIC Homan Square<br>
+    
+    Jon Chambers, SAIC, Film, Video, New Media, and Animation<br>
+    
+    James Connolly, SAIC, Film, Video, New Media, and Animation<br>
+    
+    william cordova, SAIC Alumni. Cultural Practitioner<br>
+    
+    Kaycee Filson, former SAIC Assistant Director of On Campus Admissions<br>
+    
+    Wanbli Gamache, SAIC Faculty - Lecturer, ATS, and Film, Video, New Media, and Animation MFA Alumn<br>
+    
+    Maria Gaspar, SAIC, Contemporary Practices<br>
+    
+    Liz Gomez, SAIC Alumni & Staff, BFA Painting & Drawing, 2014, Residence Hall Director, Department of Residence Life<br>
+    
+    Ann Lui, SAIC, AIADO<br>
+    
+    C. Lovey Marshall, SAIC, Staff - Residence Life<br>
+    
+    Kristin McWharter, SAIC, Art & Technology Studies (ATS)<br>
+    
+    Allie n Steve Mullen - Associate Professor, Adj, ATS / Liberal Arts / FVNMA / Sound, PT Faculty Senator <br>
+    
+    Huong Ngo, SAIC, Contemporary Practices <br>
+    
+    Mary Patten, SAIC, FVNMA<br>
+    
+    Laura Prieto-Velasco, SAIC Faculty - Assistant Professor, Adjunct, Sculpture, Fashion, Designed Objects<br>
+    
+    Chire Regans, Artist & Activist<br>
+    
+    Sarah Ross, SAIC, Art Education <br>
+    
+    Cauleen Smith, Los Angeles based Artist and Ally and former visiting faculty whose contract was terminated prematurely<br>
+    
+    Aram Han Sifuentes, SAIC, Associate Professor, Adj., Liberal Arts, Undergrad Division, Art Therapy, Alum 2013 <br>
+    
+    Roberto Sifuentes, SAIC, Professor, Performance <br>
+
+    Savneet Talwar, Professor, Art Therapy and Counseling<br>
+
+    Lisa Vinebaum, Associate Professor and Chair, Fiber and Material Studies<br>
+    
+    Kenneth Washington, Wellness Center, Counseling Services<br>
+
+    
+    <br>
+
+  <b><h4>Supported by our allied students and alumni,</h4></b><br>
+  Nanci Amaka (formerly Nanci Nwamaka Ikejimba), SAIC BFA/BAVCS 2008, RA 2007-2008<br>
+
+  Maribel Ang, SAIC Alumni, BFA 2018 Fiber & Material Studies, past SAIC employee<br>
+  
+  Elizabeth Axtman, SAIC MFA 2006, Photography<br>
+  
+  Wisdom Baty, SAIC Alumna, Arts Administration and Policy, MA 2018, <br>
+  
+  Zoe Butler, SAIC, ATS/ FVNMA BFA<br>
+  
+  C Alex Clark, SAIC Low-Residency MFA, Alumnus 2018 <br>
+  
+  Alex Bradley Cohen, SAIC Alumni, BFA 2014 Painting<br>
+  
+  Nicole Melanie Davis, SAIC Alumni, BA Visual and Critical Studies, 2004; BFA Sculpture 2003<br>
+  
+  Armand Fields, SAIC<br>
+  
+  Nadia Frierson, B.F.A. 2020 Fiber & Material Studies, Admissions Student Ambassador Coordinator<br>
+  
+  Samantha Hill, SAIC Alumni, MFA Sculpture 2010; former Faculty - Lecturer, Arts Adminstration <br>
+  
+  Toni Lauren Ivory, SAIC BFA'23, Painting and Drawing<br>
+  
+  Verlena Johnson, SAIC Alumno, MFA Sculpture, 2001<br>
+  
+  Shelby Morris Johnston, SAIC, MFA Low Residency Program, Alumnus 2018<br>
+
+  Jonathan Korotko, Assistant Director of On Campus Admissions (MFA Printmedia 2019)<br>
+  
+  Freddie Lambright, III, SAIC Alumni, BFA Painting & Drawing 2018<br>
+  
+  Sheika Lugtu, Alumni and Assistant Director of Undergraduate Admissions<br>
+  
+  Weléla Mar Kindred SAIC 2003 Performance / Cinema Studies <br>
+  
+  Joelle Mercedes, SAIC<br>
+  
+  Janelle Ayana Miller, SAIC Alumni, BFA 2017<br>
+  
+  Jackson Moore, Associate Director of International Admissions<br>
+  
+  Clifford Owens, SAIC Alumni, BFA 1998; Guest Faculty, Photography, 2007<br>
+
+  Kate Perryman, Assistant Director of International Admissions<br>
+  
+  Claire Spaulding, SAIC Alumni BFA/BAVCS 2018, Assistant Director of Undergraduate Admissions<br>
+  
+  Adia Sykes, SAIC Alumna, Arts Administration and Policy, MA 2018 <br>
+
+  Jordan Turk, SAIC Low-Residency MFA Alumni<br>
+  
+  Simone Viteri, SAIC former student + worker at Free Radio SAIC and SAIC at Homan Square <br>
+  
+  Alexander Richard Wilson, BFA AIADO, Ceramics 2017<br>
+ 
+  Derrick Woods-Morrow, SAIC Alumni, MFA Photography 2016<br>
+  
+  Nicholas Zepeda, B.F.A. 2021, Painting and Drawing, Admissions Student Ambassador Coordinator<br>
+  
+     
+      <br></div><br>
+      <div class="col-sm-12">
+      <b><h4>Supported by our community, </h4></b><br>
+
+      <embed src="https://saicmovingforward.github.io/letter/link_docs/cosigners.pdf" type="application/pdf" style="border:none;" width="100%" height="465"></iframe><br><br>
+
+        *Please submit your name in the form below and it will appear here within 24h. <br>
+          Please be patient as each list is upated manually. 
+        
+        <br><br><br><br><br>
+
+        <h1>In addition to our immeasurable solidarity with the BSU and voices before us, we also suggest the actions below be made in the name of care and reparations:<br><br></h1>
+        
+        <h2>CARE FOR BIPOC STUDENTS</h2><br>
+
+        <p><ol start="28">
+          <li><span>Recipients of financial awards should reflect the racial makeup of the city of Chicago by mandating a minimum of 30% of total scholarships go to Black students.</span></li><br>
+          <li><span>Require the addition of “Social Justice Learning Objectives” to every syllabi in every course by fall of 2021.</li><br>
+          <li><span>Require a critical race art history course to be taken within every students’ first two years at SAIC, to be taught by existing BIPOC faculty by Spring 2022.</span></li><br>
+          <li><span>Significantly improve, enhance, and empower the Title IX office and the SAAM Committee to proactively address the intersections of sexual assault, police violence, racism, and class inequities by carrying out internal assessments and offering targeted support services.</span></li><br>
+          <li><span>Hire Chicago-based QTPOC consultant to train Title IX office, faculty and staff on sexual harassment and other forms of sexual violence against trans students.</span></li><br>
+          <li><span>Continue to commit to transparency at the DLRC, Wellness Center, and Counseling Services by prioritizing the recruitment of full-time and retaining current staff of color, including queer, trans, and disabled staff of color who practice racially and culturally informed mental health and trauma response.</span></li>
+        </ol></p><br><br>
+
+        <h2>INVESTMENT IN FACULTY</h2><br>
+        <p><ol start="34">
+          <li><span>Require anti-racism training as part of all new faculty on-boarding. Commit to working with a QTPOC-led committee of students workers that is explicitly committed to social transformation rooted in maintaining accountability, analyzing power and gatekeeping, learning from both popular and institutional history, and undoing internalized oppression--such as the People’s Institute for Survival and Beyond.</span></li></p>
+        </ol><br><br><br><br><br>
+
+        <h1>We write in solidarity with the ongoing efforts from students, faculty, and staff at SAIC and SAIC alumni. These efforts include reference to the following letters and petitions:</h1><br>
+
+        <p><a href="https://www.instagram.com/tv/CBBaxlsDpTt/?igshid=k13hz9nex40q"> Fashion Student Experience</a><br><br>
+        <a href="https://www.instagram.com/p/CBTttY6BZju/">SAIC AIADO Student Experience</a><br><br>
+        <a href="#" id="myBtn">shawné michaelain holloway at the June 5th Faculty Town Hall</a><br>
+
+                    <!-- Trigger/Open The Modal -->
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <center>
+                          <video width="70%" controls>
+                          <source src="media/Faculty_Town_Hall_June-5th-2019.mp4" type="video/mp4">
+                          Your browser does not support HTML video.
+                          </video>
+                        </center>
+                      </div>
+                    </div>
+
+                    <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                      modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                      modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+                    </script>
+
+        <br><a href="https://www.change.org/p/school-of-the-art-institute-of-chicago-president-elissa-tenny-demand-the-resignation-of-saic-s-martin-berger-after-use-of-the-n-word">Petition to Demand the Resignation of Martin Berger After the Use of the N-Word</a><br><br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSesvfzjbXpahQ71fvWvYLwUeJ5phpjjrY4u88YuAepmOQVUsA/viewform">SAIC Campus-Wide Petition for Universal Credit, Restorative Action, and New Sustainable Practice</a><br><br>
+        <a href="https://www.chicagoartsforblacklives.com/">Letter from Chicago Arts for Abolition to Mayor Lori Lightfoot, Chicago Public Schools CEO Janice Jackson, the Chicago Board of Education, CPS principals, and LSC Representatives across the City</a><br><br>
+        <a href="https://docs.google.com/document/d/14CUFLc5FzlVEUdleJfAR4_-HjK4s9jTkaEJzBOY5pDQ/mobilebasic?urp=gmail_link">Message from the Art Therapy and Counseling Department</a><br><br>
+        <a href="The Diversity Disparity: Report Examines Racial Diversity at SAIC, 2002">The Diversity Disparity: Report Examines Racial Diversity at SAIC, 2002</a><br><br>
+        <a href="https://digitalarchives.library.newschool.edu/index.php/Detail/objects/NS010102_000025">Seven Demands by the Black Community of the New School, 1970</a><br><br>
+        <a href="https://notesoncredibility.cargo.site/">Notes on Credibility: A statement from the African American Student Union and AfricaGSD to the Administration of the Harvard Graduate School of Design</a><br><br>
+        <a href="https://blackartistsforfreedom.com/">Black Artists for Freedom</a><br><br>
+        <a href="https://www.bostonartsforblacklives.com/">Boston Arts for Black Lives</a><br><br>
+        <a href="https://medium.com/@nanachinara/an-open-letter-to-arts-organizations-rampant-with-white-supremacy-4540f8f0e45f">An Open Letter to Arts Organizations Rampant With White Supremacy by Nana Chinara</a><br><br>
+        <a href="https://saicsolidarity.s3.amazonaws.com/Student+Letter+to+SAIC.pdf">SAIC Solidarity</a><br>
+        <br><br><br><br><br><br>
+    </div>
+  </div>
+
+</div>
+
+<!-- Container (Cosign Section) -->
+<div id="cosign" class="container-fluid bg-grey">
+        <div class="container">
+            <div id="wrapper">
+                
+               <div><br><br><br><br><h1 style="color:#fff">Join us in Solidarity.</h1><br>
+                <p>Change may be set in motion by a few but creating a sustainable impact on our community will take many. By signing the form below, you consent to adding your name to the list of community members fighting for equity at our institution. We recognize the precarity and risk involved with visibility and thank you for standing alongside us in this time of monumental shifts. <br><br>
+
+                <iframe src="
+                https://zfrmz.eu/HHyA0Ov1GBA6Wo94SLZQ" style="border:none;" width="100%" height="465"></iframe><br><br>
+                    
+               * Please note that, due to privacy concerns, these signatures are reuploaded manually at least every 24 hours.<br>If you don't see your signature appear in that time, feel free to contact us. 
+                    
+                </p><br><br><br><br></div>
+    
+
+            </div>
+              </div>
+        
+        </div>
+
+
+    </div>
+
+<!-- Container (Friends Section) -->
+<div id="contact" class="container">
+
+        <br><br><br><br><div class="container text-center"><p><span style="font-size: 25px; font-family: 'Lora', serif">saicblackfutures@protonmail.com</span></p><br><br>
+            
+            <br>&#10134;<br>
+            
+        <br><h2>To further support equitable futures at SAIC please consider supporting the following, concurrent efforts.</h2><br></div><br>
+
+        <center><button class="button"><a href="https://www.change.org/p/school-of-the-art-institute-of-chicago-president-elissa-tenny-demand-the-resignation-of-saic-s-martin-berger-after-use-of-the-n-word"><span style="color:#000; font-size: 15px;">Demand the Resignation of SAIC's Martin Berger After Use of the N-Word</span></a></button></p><br>
+        
+        <p><button class="button"><a href="https://www.saicsolidarity.org"><span style="color:#000000; font-size: 15px;">SAIC Solidarity</span></a></button>
+        
+        </p><br></center>
+    <br>
+
+
+      
+    </div>
+  </div>
+  
+</div>
+
+   
+    <br><br><br>
+ </div>
+</div>
+</div>
+
+
+
+<div class="footer"><p>Do the dreamwork.</p></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
